@@ -15,6 +15,8 @@ public interface EquipamentosService {
 	
 	public Equipamentos equipamentosPorID(String id);
 	
-    public Equipamentos cadastroEquipamentos(Equipamentos equipamentos) ;
+    public Equipamentos cadastroEquipamentos(Equipamentos equipamentos);
+    
+    public Equipamentos cadastroDeFaseDeObrasPorEquipamento (String id, String idFaseDeObras);
     
 }
