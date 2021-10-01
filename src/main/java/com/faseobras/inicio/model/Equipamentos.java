@@ -7,22 +7,27 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 @Data
-@Document 
+@Document
 @Getter
 @Setter
 public class Equipamentos {
     
         @Id
         private String id;
+        
         private String equipamento;
 
+        
         @DBRef
         private List<FaseDeObras> faseDeObras = new ArrayList<>();
+        
 
         public Equipamentos(){}
 

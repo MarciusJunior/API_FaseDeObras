@@ -48,7 +48,7 @@ public class EquipamentosController{
 	@PutMapping("/{id}/{idFaseDeObras}")
 	public Equipamentos cadastroDeFaseDeObrasPorEquipamento(@PathVariable String id, @PathVariable String idFaseDeObras) {
 		
-		return null;
+		return this.service.cadastroDeFaseDeObrasPorEquipamento(id, idFaseDeObras);
 		
 	}
 	

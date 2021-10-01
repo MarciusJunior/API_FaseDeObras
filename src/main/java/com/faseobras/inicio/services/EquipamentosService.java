@@ -3,6 +3,7 @@ package com.faseobras.inicio.services;
 import java.util.List;
 
 import com.faseobras.inicio.model.Equipamentos;
+import com.faseobras.inicio.model.dto.EquipamentosDTO;
 import com.faseobras.inicio.repositories.EquipamentosRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
