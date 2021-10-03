@@ -8,10 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.faseobras.inicio.model.Equipamentos;
 import com.faseobras.inicio.model.FaseDeObras;
-import com.faseobras.inicio.model.dto.FaseDeObrasDTO;
 import com.faseobras.inicio.repositories.EquipamentosRepository;
 import com.faseobras.inicio.repositories.FaseDeObrasRepository;
-import com.faseobras.inicio.repositories.NomesDasFasesRepository;
 
 @Service
 public class EquipamentosServiceImpl implements EquipamentosService{
@@ -22,8 +20,6 @@ public class EquipamentosServiceImpl implements EquipamentosService{
 	@Autowired
 	private FaseDeObrasRepository faseRepo;
 	
-	@Autowired
-	private NomesDasFasesRepository nomeRepo;
 	
 	@Override
 	public Equipamentos cadastroEquipamentos(Equipamentos equipamentos) {
@@ -43,8 +39,6 @@ public class EquipamentosServiceImpl implements EquipamentosService{
 
 	@Override
 	public Equipamentos cadastroDeFaseDeObrasPorEquipamento(String id, String idFaseDeObras) {
-		List<FaseDeObras> list = faseRepo.findAll();
-		List<FaseDeObrasDTO> listDTO = list.stream().map(obj -> new FaseDeObrasDTO(obj)).collect(Collectors.toList());
 		
 		Equipamentos idEquip = equipamentosPorID(id);
 		
